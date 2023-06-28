@@ -1,0 +1,80 @@
+.title {
+    min-height: 6vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+  }
+  
+  .text,
+  .page-name,
+  .option {
+    flex: 1;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+  }
+  
+  .option {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .page-name {
+    margin-inline: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #645CBB;
+  }
+  
+  .back-btn {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    margin-inline: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  
+  .back {
+    height: 10px;
+  }
+  
+  .options {
+    min-height: 6vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  
+  .view {
+    display: flex;
+    background-color: #645CBB;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add {
+    display: flex;
+    background-color: #645CBB;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    height: calc(100vh - 6vh);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
