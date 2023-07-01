@@ -6,7 +6,7 @@ import ViewCourses from './view-courses'
 import Editcourse from './edit-course'
 import { Error } from './Error';
 
-import { Route, Routes, NavLink } from 'react-router-dom';
+import {BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 
 export default function Coursemanagement() {
   return (
