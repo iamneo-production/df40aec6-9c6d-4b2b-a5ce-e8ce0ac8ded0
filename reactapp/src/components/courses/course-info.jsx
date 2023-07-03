@@ -25,7 +25,7 @@ const Courseinfo = () => {
     <>
     
     <div className="heading-container">
-    <button className='course-back-btn' onClick={()=>navigate("/")}>Back</button>
+    <button className='course-back-btn' onClick={()=>navigate("/courses")}>Back</button>
       <p className='course-heading'>{course.name}</p>
     </div>
     <div className="body-container">
@@ -44,7 +44,7 @@ const Courseinfo = () => {
         </div>
       </div>
       <div className="container4">
-        <button className='course-enroll-btn' onClick={()=>navigate("/")}>Enroll</button>
+        <button className='course-enroll-btn' onClick={()=>navigate("/courses")}>Enroll</button>
       </div>
       
     </div>
