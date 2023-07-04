@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .app-name{
+    flex:1;
+    align-self:flex-start;
+    margin-left: 50px;
+    text-align: left;
+    color: white;
+  }
+  .app-name-text{
+    margin: 0px;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    user-select: none;
+  }
+  .profile{
+    flex: 1;
+    align-self: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+    text-align: right;
+    display: flex;
+  }
+  .username{
+    padding: 3px 10px;
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    user-select: none;
+  }
