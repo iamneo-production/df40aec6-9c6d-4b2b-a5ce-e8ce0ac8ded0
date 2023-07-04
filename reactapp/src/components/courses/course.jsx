@@ -41,16 +41,18 @@ console.log(courses);
           <div className="course-card-container" key={curCourse.id}>
           <div className="course-card">
             <p className='course-name'>{curCourse.name}</p>
-            <p className='course-details'>
+            <p className='course-details' id='short-txt'>
             <span style={{fontWeight:'bold'}}>Description: </span>
               {curCourse.description}
             </p>
             <div className="block">
-            <p className='course-details'><span style={{fontWeight:'bold'}}>Prerequisites: </span>{curCourse.prerequisites}</p>
-            <p className='course-details'><span style={{fontWeight:'bold'}}>Credits: </span>{curCourse.credits}</p>
+            <p className='course-details' id='short-txt'><span style={{fontWeight:'bold'}}>Prerequisites: </span>{curCourse.prerequisites}</p>
             </div>
             <div className="block">
-              <button className='view-more' onClick={() => navigate(`/course-info/${curCourse.id}`)}>View More</button>
+            <p className='course-details'><span style={{fontWeight:'bold'}}>Credits: </span>{curCourse.credits}</p>
+            </div>
+            <div className="block" style={{ marginTop: "5px"}}>
+              <button className='view-more' onClick={() => navigate(`/courses/course-info/${curCourse.id}`)}>View More</button>
             </div>
             
           </div>

@@ -1,19 +1,28 @@
+.course-content{
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
 .title{
-    min-height: 6vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     background-color:  white;
     margin: 0px;
     padding: 0px;
     align-items: center;
+    justify-content: center;
 }
 .text, .page-name, .option{
     flex: 1;
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
-    
     user-select: none;
+}
+.page-name{
+    text-align: center;
 }
 .option{
     font-size: 15px;

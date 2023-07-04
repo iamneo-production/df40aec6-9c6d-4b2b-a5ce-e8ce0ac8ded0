@@ -12,6 +12,7 @@
     font-family: montserrat;
     font-weight: 800;
     color: white;
+    margin-bottom: 50px;
 }
 .course-details-heading{
     font-size: 1em;
@@ -56,6 +57,7 @@
     font-weight: 700;
     color: #645CBB;
     font-size: 15px;
+    margin-bottom: 20px;
 }
 .course-enroll-btn{
     height: 40px;

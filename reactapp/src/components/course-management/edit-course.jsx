@@ -29,7 +29,7 @@ export default function Editcourse() {
     if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){}
       await axios.put(`http://localhost:8080/courses`, course);
     
-    navigate("/");
+    navigate("/course-management");
   }
 
   const fetchCourses = async () =>{
@@ -37,13 +37,13 @@ export default function Editcourse() {
     setCourse(result.data)
   }
   const back = () =>{
-    navigate("/");
+    navigate("/course-management");
   }
   
   return (
     <>
     <div className="sub-container2">
-      <div className="card">
+      <div className="form-card">
           <p className='sub-heading'>Edit Course</p>
         <form onSubmit={(e)=>onSubmit(e)}>
           <div className="user-box">

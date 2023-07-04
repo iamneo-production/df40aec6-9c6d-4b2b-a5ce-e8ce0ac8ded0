@@ -31,12 +31,14 @@
 }
 
 .course-card-container{
-    height:33vh;
+    height: fit-content;
     width: 33%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0px
+    gap: 0px;
+    margin-top: 10px; 
+    margin-bottom: 15px;   
     /* margin: 10px 40px 10px 40px; */
 }
 .course-card{
@@ -65,11 +67,14 @@
     margin: 0px;
     padding: 5px;
     justify-self: center;
+    max-width: 95%;
+    color: #645CBB;
+    flex-wrap: nowrap;
+}
+#short-txt{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 95%;
-    color: #645CBB;
 }
 
 .block{

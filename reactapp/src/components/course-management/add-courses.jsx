@@ -25,16 +25,16 @@ export default function AddCourses() {
     if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
       await axios.post("http://localhost:8080/courses", course);
     }
-    navigate("/");
+    navigate("/course-management");
   }
   const back = () =>{
-    navigate("/");
+    navigate("/course-management");
   }
   
   return (
     <>
     <div className="sub-container2">
-      <div className="card">
+      <div className="form-card">
           <p className='sub-heading'>Course Details</p>
         <form onSubmit={(e)=>onSubmit(e)}>
           <div className="user-box">

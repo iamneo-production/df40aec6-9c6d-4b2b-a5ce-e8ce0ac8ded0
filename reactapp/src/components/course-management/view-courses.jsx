@@ -45,10 +45,10 @@ export default function ViewCourses() {
     <div className="search">
         <form className='search-form'>
           <input className='search-bar' onChange = {(e)=>setQuery(e.target.value)} type="text" placeholder='Search a course..' />
-          <button className="btn" type="submit">Search</button>
+          <button className="butn" type="submit">Search</button>
         </form>
        </div>
-       <div className="list">
+    <div className="list">
     <table className='content-table'>
       <thead>
         <tr>
@@ -73,7 +73,7 @@ export default function ViewCourses() {
                   <td>{curCourse.prerequisites}</td>
                   <td>{curCourse.credits}</td>
                   <td className='action'>                  
-                    <button onClick={() => navigate(`/edit-course/${curCourse.id}`)}>
+                    <button onClick={() => navigate(`/course-management/edit-course/${curCourse.id}`)}>
                       <img src={editlogo} alt="" width="10"/>
                     </button>
                     <button onClick={()=>deleteCourse(curCourse.id)}>

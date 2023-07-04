@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 }
-.card{
+.form-card{
     height: 80%;
     width: 25%;
     background-color: #8294c4a4;
@@ -72,5 +72,6 @@ form{
 :placeholder-shown{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: small;
     color: #645cbbd0;
 }
