@@ -1,0 +1,36 @@
+.container-fluid{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  border: 0px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header{
+  height: 10vh;
+  display: flex;
+  width: 100%;
+  background-color: #645CBB;
+  align-items: center;
+}
+
+.body{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.option.active{
+  color: #645CBB;
+  font-weight: 800;
+}
+
+.dashboard{
+  width:100%;
+  flex:1;
+  padding:16px;
+  margin-left:200px;
+  overflow:auto;
+} 
