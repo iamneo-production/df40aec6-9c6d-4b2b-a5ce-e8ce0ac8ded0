@@ -1,0 +1,72 @@
+.heading-container{
+    height: fit-content;
+    background-color: #645CBB;
+    box-sizing: border-box;
+    padding: 3%;
+    margin: 1%;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+.course-heading{
+    font-size: 2.5em;
+    font-family: montserrat;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 50px;
+}
+.course-details-heading{
+    font-size: 1em;
+    font-family: montserrat;
+    font-weight: 800;
+    color: #645CBB;
+}
+.course-details-body{
+    font-family: montserrat;
+    flex-wrap: wrap;
+}
+.body-container{
+    height: 100%;
+    box-sizing: border-box;
+    padding: 3%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container1{
+    width: 60%;
+}
+.container2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container4{
+    width: 10%;
+}
+.container3{
+    display: flex;
+    gap: 10px;
+}
+.course-back-btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+    font-family: montserrat;
+    font-weight: 700;
+    color: #645CBB;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.course-enroll-btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+    font-family: montserrat;
+    font-weight: 700;
+    background-color: #645CBB;
+    color: white;
+    font-size: 15px;
+}
