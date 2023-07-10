@@ -26,14 +26,14 @@ export default function Editcourse() {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){}
-      await axios.put(`http://localhost:8080/courses`, course);
-    
+    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+      await axios.put(`https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses/${id}`, course);
+    }
     navigate("/course-management");
   }
 
   const fetchCourses = async () =>{
-    const result = await axios.get(`http://localhost:8080/courses/${id}`)
+    const result = await axios.get(`https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses/${id}`)
     setCourse(result.data)
   }
   const back = () =>{

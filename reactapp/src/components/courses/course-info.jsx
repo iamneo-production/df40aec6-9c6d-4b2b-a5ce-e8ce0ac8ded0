@@ -15,7 +15,7 @@ const Courseinfo = () => {
     credits:""
   })
   const fetchCourses = async () =>{
-    const result = await axios.get(`http://localhost:8080/courses/${id}`)
+    const result = await axios.get(`https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses/${id}`)
     setCourse(result.data)
   }
   useEffect(()=>{

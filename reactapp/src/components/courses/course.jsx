@@ -9,7 +9,7 @@ const Course = () => {
   
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/courses");
+      const res = await axios.get("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses");
       if (res.data.length > 0) {
         setCourses(res.data);
       }

@@ -14,7 +14,7 @@ export default function ViewCourses() {
 
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/courses");
+      const res = await axios.get("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses");
       if (res.data.length > 0) {
         setCourses(res.data);
       }
@@ -26,7 +26,7 @@ export default function ViewCourses() {
   const deleteCourse = async (id) => {
     let confirmation = window.confirm("Are you sure? This will delete the course permanently!");
     if(confirmation){
-      await axios.delete(`http://localhost:8080/courses/${id}`);
+      await axios.delete(`https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses/${id}`);
       fetchCourses();
     }
 

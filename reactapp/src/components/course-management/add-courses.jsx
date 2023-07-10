@@ -23,7 +23,7 @@ export default function AddCourses() {
   const onSubmit = async (e)=>{
     e.preventDefault();
     if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
-      await axios.post("http://localhost:8080/courses", course);
+      await axios.post("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses", course);
     }
     navigate("/course-management");
   }
