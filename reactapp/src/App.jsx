@@ -1,53 +1,47 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar/navbar';
-import Dashboard from './components/stud_dashboard/Dashboard';
-import Sidebar from './components/stud_dashboard/Sidebar';
-import Myenrollment from './components/stud_dashboard/Myenrollment';
-import Courses from './components/courses/courses';
-import Courseinfo from './components/courses/course-info'
-import Coursemanagement from './components/course-management/course-management'
-import Course from './components/courses/course';
-import AddCourses from './components/course-management/add-courses';
-import ViewCourses from './components/course-management/view-courses';
-import Editcourse from './components/course-management/edit-course';
-import {Error} from './components/course-management/Error';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Land from './components/Land';
+import AdminRouting from './AdminRouting';
+import StudentRouting from './StudentRouting';
+import AdminSignup from './components/AdminSignUp';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import Forgotpass from './components/forgotpass';
+import Setpassword from './components/Setpass';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const [role, setRole] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const getRoles = () => {
+      const dataString = localStorage.getItem('data');
+      const data = JSON.parse(dataString);
+      if (data && data.user && data.user.roles && data.user.roles.length > 0) {
+        const roless = data.user.roles[0].name;
+        setRole(roless);
+      }
+    }
+
+    getRoles();
+  }, [location]); // Run the effect whenever the route changes
+
   return (
-    <Router>
-      <div className="container-fluid p-0 m-0">
-        <div className="header p-0 m-0">
-          <Navbar/>
-        </div>
-        <div className="body">
-            <div className="row p-0 m-0" style={{height:"90vh"}}>
-              <div className="col-2 p-0 m-0 "  style={{height:"90vh"}}>
-                <Sidebar />
-              </div>
-              <div className="col-10 p-0 m-0" style={{height:"90vh"}}>
-                <Routes>
-                  <Route path="*" element={<Error/>}/>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/myenrollment" element={<Myenrollment />} />
-                  <Route path="/course-management" element={<Coursemanagement />} >
-                    <Route path="edit-course/:id" exact={true} element={<Editcourse/>} />
-                    <Route path='' element={<ViewCourses/>} />
-                    <Route path='add-courses' element={<AddCourses/>} />
-                    <Route path="*" element={<Error/>}/>
-                  </Route>
-                    <Route path="/courses" element={<Courses />} >
-                    <Route path="course-info/:id" exact={true} element={<Courseinfo/>} />
-                    <Route path='' element={<Course/>} />
-                    <Route path="*" element={<Error/>}/>
-                  </Route>
-                </Routes>                
-              </div>
-            </div>
-        </div>  
-      </div>  
-    </Router>
+      <Routes>
+        <Route path='/admin-signup' element={<AdminSignup />} />
+        <Route path='/' element={<Land />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path="/forgotpass" element={<Forgotpass />} />
+        <Route path="/setpass" element={<Setpassword />} />
+        {/* <Route path="/user" element={<Privateroute />}> */}
+        {role === 'ROLE_ADMIN' && <Route path="/main/*" element={<AdminRouting />} />}
+        {role === 'ROLE_NORMAL' && <Route path="/main/*" element={<StudentRouting />} />}
+        {/* </Route> */}
+      </Routes>
+
   );
 }
 

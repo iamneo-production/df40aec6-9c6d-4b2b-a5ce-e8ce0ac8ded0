@@ -34,3 +34,29 @@
   margin-left:200px;
   overflow:auto;
 } 
+
+
+a:hover {
+  color: white;
+}
+.error-name{
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  margin-inline: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: grey;
+}
+.dark-btn{
+  width: 100px;
+    height: 5vh;
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: white ;
+    background-color: #645CBB;
+    justify-self: center;
+    align-self: center;
+}
