@@ -1,0 +1,108 @@
+.title{
+    min-height: 6vh;
+    display: flex;
+    flex-direction: row;
+    background-color:  white;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.text, .page-name, .option{
+    flex: 1;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    
+    user-select: none;
+}
+.option{
+    font-size: 15px;
+    font-weight: 500; 
+    color: white;
+}
+.page-name{
+    margin-inline: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #645CBB;
+    text-align: center;
+}
+
+.sub-container2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-card{
+    height: 50%;
+    width: 25%;
+    background-color: #8294c4a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #645CBB;
+}
+.sub-heading{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #645CBB;
+    font-size: large;
+}
+.user-box{ 
+    width: 100%;
+    margin: 10% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.report-form-btn{
+    width: 30%;
+    height: 5vh;
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    margin: 0px 0px ;
+    background-color:  #645CBB;
+}
+.form-input {
+    height: 5vh;
+    width: 70%;
+    border: none;
+    border-bottom: 3px solid #645CBB;
+    border-top: 0px;
+    padding-inline-start: 3%;
+    margin: 0px;
+    outline: none; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #645CBB;
+}
+
+form{
+    width: 100%;
+}
+::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #645cbbd0;
+}
+
+:placeholder-shown{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: small;
+    color: #645cbbd0;
+}

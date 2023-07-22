@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     align-items: center;
+    justify-content: center;
 }
 .text, .page-name, .option{
     flex: 1;
@@ -37,37 +38,39 @@
 .back{
     height: 10px;
 }
-.options{
+.course-options{
     min-height: 6vh;
     display: flex;
     flex-direction: row;
     text-align: center;
+    text-decoration: none;
 }
-.view{
+.course-view{
     display: flex;
     background-color: #8294c4a4;
     flex: 1;
     align-items: center;
     justify-content: center;
     border-right: 3px solid #645CBB;
-     
+    text-decoration: none;
 }
-.add{
+.course-add{
     display: flex;
     background-color: #8294c4a4;
     flex:1;
     align-items: center;
     justify-content: center;
-     
+    text-decoration: none;
      
 }
-.content{
-    height: 80vh;
+.coursemanagement-content{
+    height: 78vh;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
-    
 }
 a {
+    text-decoration: none;
+}
+NavLink {
     text-decoration: none;
 }

@@ -12,6 +12,7 @@
     font-family: montserrat;
     font-weight: 800;
     color: white;
+    margin-bottom: 50px;
 }
 .course-details-heading{
     font-size: 1em;
@@ -32,18 +33,18 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.container1{
+.course-container1{
     width: 60%;
 }
-.container2{
+.course-container2{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.container4{
+.course-container4{
     width: 10%;
 }
-.container3{
+.course-container3{
     display: flex;
     gap: 10px;
 }
@@ -56,6 +57,7 @@
     font-weight: 700;
     color: #645CBB;
     font-size: 15px;
+    margin-bottom: 20px;
 }
 .course-enroll-btn{
     height: 40px;

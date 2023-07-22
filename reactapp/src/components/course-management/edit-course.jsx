@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import {privateAxios} from "./../../services/helper"
 
 export default function Editcourse() {
   let navigate = useNavigate();
@@ -26,29 +27,29 @@ export default function Editcourse() {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){}
-      await axios.put(`http://localhost:8080/courses`, course);
-    
-    navigate("/");
+    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+      await privateAxios.put(`/auth/courses/${id}`, course);
+    }
+    navigate("/main/course-management");
   }
 
   const fetchCourses = async () =>{
-    const result = await axios.get(`http://localhost:8080/courses/${id}`)
+    const result = await privateAxios.get(`/auth/courses/${id}`)
     setCourse(result.data)
   }
   const back = () =>{
-    navigate("/");
+    navigate("/main/course-management");
   }
   
   return (
     <>
     <div className="sub-container2">
-      <div className="card">
+      <div className="course-form-card">
           <p className='sub-heading'>Edit Course</p>
         <form onSubmit={(e)=>onSubmit(e)}>
-          <div className="user-box">
+          {/* <div className="user-box">
             <input className="form-input" onChange={(e)=>onInputChange(e)} value={id} type="text" name="id" placeholder='Course ID' required/>
-          </div>
+          </div> */}
           <div className="user-box">
             <input className="form-input" onChange={(e)=>onInputChange(e)} value={name} type="text" name="name" placeholder='Name' required/>
           </div>

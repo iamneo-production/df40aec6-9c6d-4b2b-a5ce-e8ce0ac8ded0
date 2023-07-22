@@ -1,0 +1,38 @@
+/* 
+.login-container{
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .login-row{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-col{
+    height: fit-content;
+    
+  }
+  .login-text-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 10vh;
+  }
+  .outlined-button{
+    padding: 3px 10px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    user-select: none;
+  }
