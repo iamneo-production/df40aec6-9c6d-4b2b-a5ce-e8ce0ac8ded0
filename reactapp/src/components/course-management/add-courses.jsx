@@ -3,11 +3,12 @@ import './add-courses.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+import {privateAxios} from "./../../services/helper"
 export default function AddCourses() {
   let navigate = useNavigate();
 
   const [course, setCourse] = useState({
-    id:"",
+    //id:0,
     name:"",
     description:"",
     prerequisites:"",
@@ -23,23 +24,23 @@ export default function AddCourses() {
   const onSubmit = async (e)=>{
     e.preventDefault();
     if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
-      await axios.post("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses", course);
+      await privateAxios.post("/auth/courses", course);
     }
-    navigate("/course-management");
+    navigate("/main/course-management");
   }
   const back = () =>{
-    navigate("/course-management");
+    navigate("/main/course-management");
   }
   
   return (
     <>
     <div className="sub-container2">
-      <div className="form-card">
+      <div className="course-form-card">
           <p className='sub-heading'>Course Details</p>
         <form onSubmit={(e)=>onSubmit(e)}>
-          <div className="user-box">
+          {/* <div className="user-box">
             <input className="form-input" onChange={(e)=>onInputChange(e)} value={id} type="text" name="id" placeholder='Course ID' required/>
-          </div>
+          </div> */}
           <div className="user-box">
             <input className="form-input" onChange={(e)=>onInputChange(e)} value={name} type="text" name="name" placeholder='Name' required/>
           </div>

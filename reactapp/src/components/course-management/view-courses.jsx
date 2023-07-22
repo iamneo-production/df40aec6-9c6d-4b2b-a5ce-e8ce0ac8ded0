@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import editlogo  from '../../assets/edit.png'
 import deletelogo  from '../../assets/delete.png'
 
+import {privateAxios} from "./../../services/helper"
 
 export default function ViewCourses() {
 
@@ -14,7 +15,7 @@ export default function ViewCourses() {
 
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses");
+      const res = await privateAxios.get("/auth/courses");
       if (res.data.length > 0) {
         setCourses(res.data);
       }
@@ -26,7 +27,8 @@ export default function ViewCourses() {
   const deleteCourse = async (id) => {
     let confirmation = window.confirm("Are you sure? This will delete the course permanently!");
     if(confirmation){
-      await axios.delete(`https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses/${id}`);
+      await privateAxios.delete(`/auth/enrollment/course/${id}`);
+      await privateAxios.delete(`/auth/courses/${id}`);
       fetchCourses();
     }
 
@@ -73,7 +75,7 @@ export default function ViewCourses() {
                   <td>{curCourse.prerequisites}</td>
                   <td>{curCourse.credits}</td>
                   <td className='action'>                  
-                    <button onClick={() => navigate(`/course-management/edit-course/${curCourse.id}`)}>
+                    <button onClick={() => navigate(`/main/course-management/edit-course/${curCourse.id}`)}>
                       <img src={editlogo} alt="" width="10"/>
                     </button>
                     <button onClick={()=>deleteCourse(curCourse.id)}>

@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
 }
-.form-card{
-    height: 80%;
+.course-form-card{
+    height: 90%;
     width: 25%;
     background-color: #8294c4a4;
     display: flex;
