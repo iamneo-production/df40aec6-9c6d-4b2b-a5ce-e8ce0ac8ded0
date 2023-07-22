@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './course.css'
 import { useParams, useNavigate } from 'react-router-dom';
+import { privateAxios } from '../../services/helper';
 
 const Course = () => {
   let navigate = useNavigate();
@@ -9,7 +10,7 @@ const Course = () => {
   
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/courses");
+      const res = await privateAxios.get("/auth/courses");
       if (res.data.length > 0) {
         setCourses(res.data);
       }
@@ -29,7 +30,7 @@ console.log(courses);
 
       <div className="search">
         <form className='search-form'>
-          <input className='search-bar'  onChange = {(e)=>setQuery(e.target.value)} type="text" placeholder='Search a course..' />
+          <input className='search-bar'  onChange = {(e)=>setQuery(e.target.value)} type="text" placeholder='Search courses' />
           {/* <button className="btn" type="submit">Search</button> */}
         </form>
        </div>
@@ -52,7 +53,7 @@ console.log(courses);
             <p className='course-details'><span style={{fontWeight:'bold'}}>Credits: </span>{curCourse.credits}</p>
             </div>
             <div className="block" style={{ marginTop: "5px"}}>
-              <button className='view-more' onClick={() => navigate(`/courses/course-info/${curCourse.id}`)}>View More</button>
+              <button className='view-more' onClick={() => navigate(`/main/courses/course-info/${curCourse.id}`)}>View More</button>
             </div>
             
           </div>
