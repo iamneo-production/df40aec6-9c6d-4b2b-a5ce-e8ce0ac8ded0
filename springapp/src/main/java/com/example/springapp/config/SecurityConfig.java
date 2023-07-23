@@ -21,6 +21,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+// lines 25-28 added by SoumoP
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -42,6 +43,7 @@ public class SecurityConfig {
 
     public static final String[] PUBLIC_URLS = {"/files/students/{student_id}","api/v1/auth/students/{id}","api/v1/auth/admissions/{id}","api/v1/auth/admissions","api/v1/auth/admissions/student/{studentId}","api/v1/auth/courses","/api/v1/auth/enrollmentsbyId/{student_id}", "/api/v1/auth/**", "/v3/api-docs", "/v2/api-docs", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**","api/v1/send-otp","api/v1/verify-otp","api/v1/set-password"};
 
+    // lines 46-58 added by SoumoP
     RequestMatcher[] rm = new RequestMatcher[]
     { 
         new AntPathRequestMatcher("/api/v1/auth/**"), 
@@ -68,7 +70,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
+    //line 78 editted by SoumoP; PUBLIC_URLS was replaced by rm
         http.
         csrf()
         .disable()
