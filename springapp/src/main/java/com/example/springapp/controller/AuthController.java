@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapp.Payloads.JwtAuthRequest;
-import com.examly.springapp.Payloads.JwtAuthResponse;
-import com.examly.springapp.Payloads.StudentDto;
-import com.examly.springapp.exceptions.ApiException;
-import com.examly.springapp.model.Student;
-import com.examly.springapp.repository.StudentRepo;
-import com.examly.springapp.security.JwtTokenHelper;
-import com.examly.springapp.service.StudentService;
+import com.example.springapp.Payloads.JwtAuthRequest;
+import com.example.springapp.Payloads.JwtAuthResponse;
+import com.example.springapp.Payloads.StudentDto;
+import com.example.springapp.exceptions.ApiException;
+import com.example.springapp.model.Student;
+import com.example.springapp.repository.StudentRepo;
+import com.example.springapp.security.JwtTokenHelper;
+import com.example.springapp.service.StudentService;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 
 @RestController

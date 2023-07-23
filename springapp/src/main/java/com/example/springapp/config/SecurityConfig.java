@@ -21,6 +21,10 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import com.example.springapp.security.CustomUserDetailService;
 import com.example.springapp.security.JwtAuthenticationEntryPoint;
@@ -36,9 +40,20 @@ import com.example.springapp.security.JwtAuthenticationFilter;
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    public static final String[] PUBLIC_URLS = {"/files/students/{student_id}","api/v1/auth/students/{id}","api/v1/auth/admissions/{id}","api/v1/auth/admissions","api/v1/auth/admissions/student/{studentId}","api/v1/auth/courses","/api/v1/auth/enrollmentsbyId/{student_id}", "/api/v1/auth/**", "/v3/api-docs", "/v2/api-docs",
-            "/swagger-resources/**", "/swagger-ui/**", "/webjars/**","api/v1/send-otp","api/v1/verify-otp","api/v1/set-password"
+    public static final String[] PUBLIC_URLS = {"/files/students/{student_id}","api/v1/auth/students/{id}","api/v1/auth/admissions/{id}","api/v1/auth/admissions","api/v1/auth/admissions/student/{studentId}","api/v1/auth/courses","/api/v1/auth/enrollmentsbyId/{student_id}", "/api/v1/auth/**", "/v3/api-docs", "/v2/api-docs", "/swagger-resources/**", "/swagger-ui/**", "/webjars/**","api/v1/send-otp","api/v1/verify-otp","api/v1/set-password"};
 
+    RequestMatcher[] rm = new RequestMatcher[]
+    { 
+        new AntPathRequestMatcher("/api/v1/auth/**"), 
+        new AntPathRequestMatcher("/v3/api-docs"), 
+        new AntPathRequestMatcher("/v2/api-docs"), 
+        new AntPathRequestMatcher("/swagger-resources/**"),
+        new AntPathRequestMatcher("/swagger-ui/**"),
+        new AntPathRequestMatcher("/webjars/**"),
+        new AntPathRequestMatcher("api/v1/send-otp"),
+        new AntPathRequestMatcher("api/v1/verify-otp"),
+        new AntPathRequestMatcher("api/v1/set-password"),
+        // Add more RequestMatcher instances as needed 
     };
 
     @Autowired
@@ -58,7 +73,7 @@ public class SecurityConfig {
         csrf()
         .disable()
         .authorizeHttpRequests()
-        .requestMatchers(PUBLIC_URLS)
+        .requestMatchers(rm)
         .permitAll()
         .anyRequest()
         .authenticated()

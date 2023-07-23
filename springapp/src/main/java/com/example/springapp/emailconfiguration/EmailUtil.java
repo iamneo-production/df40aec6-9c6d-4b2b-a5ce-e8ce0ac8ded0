@@ -1,13 +1,6 @@
 package com.example.springapp.emailconfiguration;
 
-
 import javax.mail.MessagingException;
-
-
-
-
-
-
 import javax.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -21,7 +14,7 @@ public class EmailUtil {
     private JavaMailSender javaMailSender;
 
 
-    public void sendSetPasswordViaEmail(String email, String otp) throws  jakarta.mail.MessagingException {
+    public void sendSetPasswordViaEmail(String email, String otp) throws  javax.mail.MessagingException {
 
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);

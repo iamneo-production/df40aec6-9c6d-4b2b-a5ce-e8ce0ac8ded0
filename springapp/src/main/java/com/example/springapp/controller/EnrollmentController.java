@@ -33,7 +33,7 @@ import javax.persistence.EntityNotFoundException;
 
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/api/v1/auth/")
 public class EnrollmentController {
 	private Logger logger = (Logger) LoggerFactory.getLogger(StudentController.class);

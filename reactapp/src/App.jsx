@@ -8,7 +8,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Forgotpass from './components/forgotpass';
 import Setpassword from './components/Setpass';
-import Privateroute from './components/PrivateRoute';
+//import Privateroute from './components/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-toastify/dist/ReactToastify.css";
 

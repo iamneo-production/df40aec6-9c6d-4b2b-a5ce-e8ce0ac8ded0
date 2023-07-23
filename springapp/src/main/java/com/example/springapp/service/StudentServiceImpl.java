@@ -137,7 +137,7 @@ public class StudentServiceImpl implements StudentService {
 
 
 	@Override
-    public String forgotPassword(String email) throws jakarta.mail.MessagingException {
+    public String forgotPassword(String email) throws javax.mail.MessagingException {
         Student users = this.studentdao.findByUserEmail(email);
         if (users == null) {
             throw new RuntimeException("Invalid email");

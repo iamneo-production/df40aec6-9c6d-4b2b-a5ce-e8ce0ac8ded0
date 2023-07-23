@@ -6,9 +6,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.examly.springapp.exceptions.ResourceNotFoundException;
-import com.examly.springapp.model.Student;
-import com.examly.springapp.repository.StudentRepo;
+import com.example.springapp.exceptions.ResourceNotFoundException;
+import com.example.springapp.model.Student;
+import com.example.springapp.repository.StudentRepo;
 
 
 @Service

@@ -6,7 +6,7 @@ import java.util.List;
 import com.example.springapp.Payloads.StudentDto;
 import com.example.springapp.model.Student;
 
-import jakarta.mail.MessagingException;
+import javax.mail.MessagingException;
 
 
 public interface StudentService {
