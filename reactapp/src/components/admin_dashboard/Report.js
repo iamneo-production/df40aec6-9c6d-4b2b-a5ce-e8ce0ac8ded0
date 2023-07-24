@@ -99,8 +99,9 @@ const Report = () => {
     
 {/* Student Details */}
     <button className="report-form-btn" style={{ justifySelf:'flex-end', width:'10%', }} onClick={()=>navigate("/main/report")}>Back</button>
+    <br/>
     <p className='page-name' >Student Details</p><br/>
-    <div className="list">
+    <div className="report-list">
     <table className='content-table'>
       <thead>
         <tr>
@@ -122,10 +123,10 @@ const Report = () => {
       </tbody>
       </table>
     </div>
-
+    <br/>
 {/* Enrollment Details */}
-    <p className='page-name' >Enrollment Report</p><br/>
-    <div className="list">
+    <p className='page-name' >Enrollment Details</p><br/>
+    <div className="report-list">
     <table className='content-table'>
       <thead>
         <tr>
@@ -148,10 +149,10 @@ const Report = () => {
       </tbody>
       </table>
     </div>
-
+<br/>
 {/* Admission Details */}
 <p className='page-name' >Admission Details</p><br/>
-    <div className="list">
+    <div className="report-list">
     <table className='content-table'>
       <thead>
         <tr>
@@ -167,6 +168,7 @@ const Report = () => {
       </tbody>
       </table>
     </div>
+    <br/>
     </>
   )
 }

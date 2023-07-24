@@ -13,7 +13,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
-    
+    font-size: 1vw;
     user-select: none;
 }
 .option{
@@ -37,8 +37,8 @@
     justify-content: center;
 }
 .form-card{
-    height: 50%;
-    width: 25%;
+    height: 60%;
+    width: 400px;
     background-color: #8294c4a4;
     display: flex;
     align-items: center;
@@ -55,7 +55,8 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     color: #645CBB;
-    font-size: large;
+    font-size: 1.5em;
+    text-align: center;
 }
 .user-box{ 
     width: 100%;
@@ -73,6 +74,7 @@
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
+    font-size: 1em;
     color: white;
     margin: 0px 0px ;
     background-color:  #645CBB;
@@ -105,4 +107,17 @@ form{
     font-weight: 700;
     font-size: small;
     color: #645cbbd0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .form-card{
+        width: 40vw;
+    }
+    .sub-heading{
+        font-size: 2.5vw;
+    }
+    .report-form-btn{
+        font-size: 1.5vw;
+    }
 }

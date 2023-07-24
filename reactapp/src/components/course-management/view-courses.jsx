@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './view-courses.css'
-import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import editlogo  from '../../assets/edit.png'
 import deletelogo  from '../../assets/delete.png'
@@ -64,9 +63,7 @@ export default function ViewCourses() {
       </thead>
       <tbody>
         {
-          //courses.filter(courses=>courses.name.toLowerCase().includes(query.toLowerCase()))
           courses.filter(courses=>courses.name.toLowerCase().includes(query.toLowerCase())).map((curCourse) => {
-            //const {id, name, description, prerequisites, credits} = curCourse;
             return (
                 <tr key={curCourse.id}>
                   <td>{curCourse.id}</td>
