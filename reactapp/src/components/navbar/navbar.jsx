@@ -37,7 +37,7 @@ export default function Navbar() {
         <p className='app-name-text'>Admission Portal</p>
       </div>
       <div className="navbar-button-container" >
-        <p onClick={()=>navigate("/main/profilePage")} className='navbar-button' ><img className="icon" src={UserLogo}/>&nbsp;{users.firstname}</p>
+        <p onClick={()=>navigate("/main/profilePage")} className='navbar-button' ><img className="nav-icon" src={UserLogo}/>&nbsp;{users.firstname}</p>
         <p onClick={logout} className='navbar-button' >Logout</p>
       </div>
     </div>

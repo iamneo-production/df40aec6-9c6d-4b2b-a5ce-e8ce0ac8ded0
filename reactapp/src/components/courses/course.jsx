@@ -34,7 +34,6 @@ console.log(courses);
           {/* <button className="btn" type="submit">Search</button> */}
         </form>
        </div>
-
     <div className="course-container">
     {
       courses.filter(courses=>courses.name.toLowerCase().includes(query.toLowerCase())).map((curCourse) => {

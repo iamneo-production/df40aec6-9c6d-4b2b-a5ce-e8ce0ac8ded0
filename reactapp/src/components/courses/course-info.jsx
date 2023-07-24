@@ -23,6 +23,8 @@ const Courseinfo = () => {
     prerequisites: '',
     credits: '',
   });
+  const [enroll, setEnroll] = useState([]);
+  const [isEnrolled, setIsenrolled] = useState(0);
 
   const fetchCourses = async () => {
     const result = await privateAxios.get(`http://localhost:8080/api/v1/auth/courses/${id}`);
@@ -32,19 +34,53 @@ const Courseinfo = () => {
   const enrollCourse = async () => {
     try {
       await privateAxios.post(`http://localhost:8080/api/v1/auth/enroll/${users.id}/${id}`);
-      
       navigate('/main/courses'); 
     } catch (error) {
-      
       console.error(error);
     }
   };
-
+  const fetchEnrolls = async () => {
+    try {
+      const result2 = await privateAxios.get(`/auth/enrollmentsbyId/${users.id}`);
+      setEnroll(result2.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const findEnroll = () => {
+    try{
+      for (let i = 0; i < enroll.length; i++) {
+        console.log(enroll[i].course.id);
+        if(enroll[i].course.id==id)
+          setIsenrolled(1);
+      }
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+  
   useEffect(() => {
     fetchCourses();
   }, []);
 
-  return (
+  useEffect(() => {
+    if(users.id!=undefined)
+    {
+      fetchEnrolls();
+    }
+  }, [users.id]);  
+
+  useEffect(() => {
+    if(enroll!=[])
+    {
+      findEnroll();
+    }
+  }, [enroll]);
+
+console.log(enroll);
+console.log(isEnrolled);
+return (
     <>
       <div className="heading-container">
         <button className="course-back-btn" onClick={() => navigate('/main/courses')}>
@@ -68,9 +104,9 @@ const Courseinfo = () => {
           </div>
         </div>
         <div className="container4">
-          <button className="course-enroll-btn" onClick={enrollCourse}>
+          {!isEnrolled && <button className="course-enroll-btn" onClick={enrollCourse}>
             Enroll
-          </button>
+          </button>}
         </div>
       </div>
     </>
