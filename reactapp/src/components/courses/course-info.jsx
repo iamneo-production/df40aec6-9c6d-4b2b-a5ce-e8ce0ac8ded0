@@ -27,13 +27,13 @@ const Courseinfo = () => {
   const [isEnrolled, setIsenrolled] = useState(0);
 
   const fetchCourses = async () => {
-    const result = await privateAxios.get(`http://localhost:8080/api/v1/auth/courses/${id}`);
+    const result = await privateAxios.get(`/auth/courses/1`);
     setCourse(result.data);
   };
 
   const enrollCourse = async () => {
     try {
-      await privateAxios.post(`http://localhost:8080/api/v1/auth/enroll/${users.id}/${id}`);
+      await privateAxios.post(`/auth/enroll/${users.id}/${id}`);
       navigate('/main/courses'); 
     } catch (error) {
       console.error(error);

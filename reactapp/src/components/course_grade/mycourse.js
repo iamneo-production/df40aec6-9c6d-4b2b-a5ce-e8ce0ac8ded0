@@ -40,8 +40,11 @@ const MyCourse = () => {
     console.log(users);    
   }, []);
 
-  useEffect(() => {    
-    fetchCourses();  // fetch enrolls
+  useEffect(() => {  
+    if(users.id!=undefined)  {
+      fetchCourses();
+    }
+      // fetch enrolls
   }, [users.id]); 
   
   const handleViewMore = (id) => {

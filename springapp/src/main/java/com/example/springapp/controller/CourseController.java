@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springapp.model.Course;
-import com.example.springapp.service.CourseServiceInterface;
 import com.example.springapp.repository.CourseRepo;
+import com.example.springapp.service.CourseServiceInterface;
 
 
 @RestController
-@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/") // connects the back end with front end
+@CrossOrigin("http://localhost:3000/") // connects the back end with front end
 @RequestMapping("/api/v1/auth/")
 public class CourseController {
 	@Autowired
