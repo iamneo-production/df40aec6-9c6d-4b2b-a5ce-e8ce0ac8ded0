@@ -1,0 +1,47 @@
+.heading-container {
+  height: 170px;
+  background-color: #645CBB;
+  box-sizing: border-box;
+  padding: 3%;
+  margin: 1%;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.course-heading {
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 800;
+  color: white;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.body-container p {
+  margin: 10px 0;
+  font-size:larger;
+  font-weight: 700;
+  color: #645CBB;
+}
+
+.back-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #645CBB;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #4D478D;
+}
