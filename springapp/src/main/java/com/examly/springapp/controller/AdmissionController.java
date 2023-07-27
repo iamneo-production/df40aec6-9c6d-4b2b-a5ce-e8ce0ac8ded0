@@ -24,7 +24,7 @@ import com.examly.springapp.model.Student;
 import com.examly.springapp.repository.AdmissionRepo;
 import com.examly.springapp.repository.StudentRepo;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 
 @RestController
 @CrossOrigin
@@ -160,28 +160,28 @@ public class AdmissionController {
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
-    // @DeleteMapping("/admissions/student/{studentId}")
-    // public ResponseEntity<Void> deleteAdmissionByStudentId(@PathVariable int studentId) {
-    //     try {
-    //         Student student = studentRepo.getById(studentId);
-    //         Admission admission = null;
-    //         for (Admission adm : student.getAdmissions()) {
-    //             if (adm.getStudent().getId() == studentId) {
-    //                 admission = adm;
-    //                 break;
-    //             }
-    //         }
-    //         if (admission != null) {
-    //             admissionRepo.delete(admission);
+    @DeleteMapping("/admissions/student/{studentId}")
+    public ResponseEntity<Void> deleteAdmissionByStudentId(@PathVariable int studentId) {
+        try {
+            Student student = studentRepo.getById(studentId);
+            Admission admission = null;
+            for (Admission adm : student.getAdmissions()) {
+                if (adm.getStudent().getId() == studentId) {
+                    admission = adm;
+                    break;
+                }
+            }
+            if (admission != null) {
+                admissionRepo.delete(admission);
 
-    //             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    //         } else {
-    //             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    //         }
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
 
 
-    //     } catch (EntityNotFoundException e) {
-    //         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    //     }
-    // }
+        } catch (EntityNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
