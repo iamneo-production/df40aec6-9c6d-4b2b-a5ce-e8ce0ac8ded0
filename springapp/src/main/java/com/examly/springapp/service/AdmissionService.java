@@ -1,10 +1,9 @@
-package com.example.springapp.service;
+package com.examly.springapp.service;
 
 
-import com.example.springapp.model.Admission;
-import com.example.springapp.repository.AdmissionRepo;
-import com.example.springapp.repository.StudentRepo;
-
+import com.examly.springapp.model.Admission;
+import com.examly.springapp.repository.AdmissionRepo;
+import com.examly.springapp.repository.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

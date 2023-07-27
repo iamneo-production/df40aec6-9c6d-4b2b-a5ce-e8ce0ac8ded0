@@ -1,4 +1,4 @@
-package com.example.springapp.model;
+package com.examly.springapp.model;
 import javax.persistence.*;
 
 import java.util.List;
@@ -13,8 +13,6 @@ public class Admission {
 
 
     private String status;
-    
-    
     @ElementCollection
     private List<String> requiredDocuments;
 
@@ -23,7 +21,7 @@ public class Admission {
         return adm_id;
     }
 
-    public void setAdm_id(int adm_id) {
+    public void setAdm_id(int enroll_id) {
         this.adm_id = adm_id;
     }
 
