@@ -1,6 +1,5 @@
 package com.examly.springapp.controller;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -24,7 +23,7 @@ import com.examly.springapp.model.Student;
 import com.examly.springapp.repository.AdmissionRepo;
 import com.examly.springapp.repository.StudentRepo;
 
-import jakarta.persistence.EntityNotFoundException;
+import javax.persistence.EntityNotFoundException;
 
 @RestController
 @CrossOrigin
@@ -100,7 +99,6 @@ public class AdmissionController {
         }
     }
 
-
     @PutMapping("/admissions/{id}/status")
     public ResponseEntity<Admission> changeAdmissionStatus(@PathVariable int id, @RequestBody String status) {
         Optional<Admission> admissionOptional = admissionRepo.findById(id);
@@ -117,11 +115,11 @@ public class AdmissionController {
         }
     }
 
-
     @PutMapping("/admissions/student/{studentId}/status")
-    public ResponseEntity<Admission> changeAdmissionStatusByStudentid(@PathVariable int studentId, @RequestBody String status) {
+    public ResponseEntity<Admission> changeAdmissionStatusByStudentid(@PathVariable int studentId,
+            @RequestBody String status) {
         List<Admission> admissions = admissionRepo.findByStudentId(studentId);
-    
+
         if (!admissions.isEmpty()) {
             Admission admission = admissions.get(0);
             admission.setStatus(status);
@@ -133,10 +131,6 @@ public class AdmissionController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    
-
-
-
 
     @DeleteMapping("/admissions/{id}")
     public ResponseEntity<Void> deleteAdmission(@PathVariable int id) {
@@ -152,36 +146,10 @@ public class AdmissionController {
         }
     }
 
-
     @GetMapping("/admissions/count")
     public ResponseEntity<Integer> getAdmissionsCount() {
         int count = (int) admissionRepo.count();
         logger.info("Retrieved count of admissions: " + count);
         return new ResponseEntity<>(count, HttpStatus.OK);
-    }
-
-    @DeleteMapping("/admissions/student/{studentId}")
-    public ResponseEntity<Void> deleteAdmissionByStudentId(@PathVariable int studentId) {
-        try {
-            Student student = studentRepo.getById(studentId);
-            Admission admission = null;
-            for (Admission adm : student.getAdmissions()) {
-                if (adm.getStudent().getId() == studentId) {
-                    admission = adm;
-                    break;
-                }
-            }
-            if (admission != null) {
-                admissionRepo.delete(admission);
-
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
-
-
-        } catch (EntityNotFoundException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
     }
 }
