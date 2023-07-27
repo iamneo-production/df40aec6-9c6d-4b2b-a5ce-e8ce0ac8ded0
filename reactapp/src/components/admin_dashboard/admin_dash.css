@@ -1,0 +1,38 @@
+.sidebar {
+  /* background-color: #e8e8e8; */
+  width: 255px;
+  position: fixed;
+  left: 0;
+  top: 10vh;
+  bottom: 0;
+  flex-shrink: 0; 
+  white-space: nowrap;
+  padding: 0px;
+  margin: 0px;
+}
+.dashboard {
+  width: 100%;
+  flex: 1;
+  padding: 0px;
+  margin-left: 0px;
+  overflow: auto;
+}
+
+.sidebar a {
+  color: blue; /* Default link color */
+}
+
+.sidebar a:visited {
+  color: black; /* Link color when visited */
+}
+
+.sidebar a:hover {
+  color: blue; /* Link color when hovered */
+}
+.sidebar .nav-item {
+  margin-bottom: 10px; 
+}
+
+.sidebar .nav-item .fa, .sidebar .nav-item span {
+  font-size: 18px;
+}

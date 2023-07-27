@@ -1,0 +1,76 @@
+.landing-container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#645CBB, white);
+    /* background-image: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-card{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ffffff2b;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff04;
+    border-radius: 20px;
+}
+.app-name{
+    text-align: center;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    font-size: 50px;
+    font-weight: 900;
+    color: #ffffff;
+}
+.landing-button-card{
+    display: flex;
+    flex-direction: row;
+}
+.glass-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 150px;
+    height: 10vh;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #645cbbaf;
+    backdrop-filter: blur(10px);
+    border: 2px solid #645CBB;
+    border-radius: 20px;
+    margin-inline: 10px;
+    user-select: none;
+    
+}
+.glass-btn:active{
+    background-color: #645CBB;
+}
+.glass-btn:hover{
+    background-color: #645CBB;
+}
+.btn-text{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: white ;
+}
+.icon{
+    width: 15px;
+}

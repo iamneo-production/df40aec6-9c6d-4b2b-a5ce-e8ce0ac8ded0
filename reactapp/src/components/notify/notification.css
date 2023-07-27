@@ -1,0 +1,52 @@
+.first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.notification-container{
+    width: 700px;
+    height: 70vh;
+    margin-top: 10px;
+    padding-top: 10px;
+    display:flex;
+    flex-direction:column;
+    overflow-y: scroll;
+    justify-self: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+.notification-card{
+    width: 98%;
+    height: fit-content;
+    background-color: #8294c439;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #645CBB;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.notification-name{
+    font-family: montserrat;
+    font-weight: 800;
+    color: #645CBB;
+    margin: 5px;
+    padding: 0px;
+}
+.notification-details{
+    font-family: montserrat;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 5px;
+    padding: 0px;
+    color: #645CBB;
+    flex-wrap: nowrap;
+}
+.noti-page-name{
+    font-size: 20px;
+    font-weight: 700;
+    color: #645CBB;
+    font-family: 'Montserrat';
+    padding-top: 15px;
+    justify-self: flex-start;
+}
