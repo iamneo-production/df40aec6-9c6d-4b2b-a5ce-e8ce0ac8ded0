@@ -25,7 +25,6 @@ export default function AddCourses() {
     e.preventDefault();
     if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
       await privateAxios.post("/auth/courses", course);
-      
     }
     navigate("/main/course-management");
   }

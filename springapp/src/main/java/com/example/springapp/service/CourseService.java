@@ -8,13 +8,6 @@ import org.springframework.stereotype.Service;
 import com.example.springapp.model.Course;
 import com.example.springapp.repository.CourseRepo;
 
-
-import org.modelmapper.ModelMapper;
-import com.example.springapp.Payloads.AdmissionDTO;
-import com.example.springapp.Payloads.CourseDTO;
-import com.example.springapp.model.Admission;
-import com.example.springapp.service.CourseServiceInterface;
-
 @Service
 public class CourseService implements CourseServiceInterface{
 	
@@ -38,8 +31,6 @@ public class CourseService implements CourseServiceInterface{
 		coursesDao.save(course);
 		return "true";
 	}
-
-
 	@Override
 	public Course updateCourse(Course course) {
 		

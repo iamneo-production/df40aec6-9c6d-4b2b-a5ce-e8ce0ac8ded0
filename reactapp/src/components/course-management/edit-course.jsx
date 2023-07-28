@@ -27,10 +27,8 @@ export default function Editcourse() {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){}
       await privateAxios.put(`/auth/courses/${id}`, course);
-    }
-      
     
     navigate("/main/course-management");
   }

@@ -46,7 +46,7 @@ export default function ViewCourses() {
     <div className="search">
         <form className='search-form'>
           <input className='search-bar' onChange = {(e)=>setQuery(e.target.value)} type="text" placeholder='Search a course..' />
-          {/* <button className="butn" type="submit">Search</button> */}
+          <button className="butn" type="submit">Search</button>
         </form>
        </div>
     <div className="list">

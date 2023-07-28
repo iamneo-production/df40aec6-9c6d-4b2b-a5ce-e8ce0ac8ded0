@@ -1,10 +1,7 @@
 package com.example.springapp.controller;
 
-import java.util.ArrayList;
-
 import java.util.List;
 
-import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,59 +17,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.Payloads.AdmissionDTO;
-import com.example.springapp.Payloads.CourseDTO;
-import com.example.springapp.model.Admission;
 import com.example.springapp.model.Course;
-import com.example.springapp.service.CourseServiceInterface;
 import com.example.springapp.repository.CourseRepo;
+import com.example.springapp.service.CourseServiceInterface;
 
 
 @RestController
-@CrossOrigin("*") // connects the back end with front end
+@CrossOrigin("http://localhost:3000/") // connects the back end with front end
 @RequestMapping("/api/v1/auth/")
 public class CourseController {
 	@Autowired
 	private CourseServiceInterface courseServices;
 	private Logger logger = LoggerFactory.getLogger(CourseController.class);
 	
-	
-	@Autowired
-	private ModelMapper modelMapper;
-	
 	@Autowired
 	private CourseRepo coursesRepo;
-	
-	
 	@GetMapping("/courses")
-	public List<CourseDTO> getCourses() {
-		
-        List<Course> co =  this.courseServices.getCourses();
-        
-        List<CourseDTO> ads = new ArrayList<>();
-        
-        for(Course ad : co) {
-        	CourseDTO ans = this.modelMapper.map(ad, CourseDTO.class);
-        	ads.add(ans);
-        	
-        }
-        return ads;
-        
-      
+	public List<Course> getCourses() {
+		 return this.courseServices.getCourses();
 	}
 	
 	@GetMapping("/courses/{id}")
-	public CourseDTO getCourse(@PathVariable String id) {
-		//return this.courseServices.getCourse(Integer.parseInt(id));
-		
-		
-		Course admissionOptional = this.courseServices.getCourse(Integer.parseInt(id));
-
-        
-        CourseDTO ans = this.modelMapper.map(admissionOptional, CourseDTO.class);
-        
-        return ans;
-        
+	public Course getCourse(@PathVariable String id) {
+		return this.courseServices.getCourse(Integer.parseInt(id));
 	}
 	@GetMapping("/courses/count")
     public ResponseEntity<Integer> getCourseCount() {
