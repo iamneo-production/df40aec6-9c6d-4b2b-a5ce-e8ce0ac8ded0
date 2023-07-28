@@ -24,8 +24,15 @@ export default function AddCourses() {
     e.preventDefault();
     try
     {
-        if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
-          await privateAxios.post("/auth/courses", course);
+      //   if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+      //     await privateAxios.post("/auth/courses", course);
+      // }
+      if (name !== '' && description !== '' && prerequisites !== '' && credits !== '') {
+        await privateAxios.post('/auth/courses', course, {
+          headers: {
+            'Content-Type': 'application/json', // Set the correct Content-Type header
+          },
+        });
       }
     }
     catch(e){

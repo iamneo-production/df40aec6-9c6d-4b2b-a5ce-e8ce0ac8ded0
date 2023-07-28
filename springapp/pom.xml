@@ -118,18 +118,18 @@
     <artifactId>javax.servlet-api</artifactId>
     <version>4.0.1</version>
 </dependency>
+	<!-- <dependency>
+		<groupId>jakarta.persistence</groupId>
+		<artifactId>jakarta.persistence-api</artifactId>
+		<version>3.1.0</version>
+	</dependency> -->
 		<!-- <dependency>
-			<groupId>jakarta.persistence</groupId>
-			<artifactId>jakarta.persistence-api</artifactId>
-			<version>3.1.0</version>
-		</dependency> -->
-		<!-- <dependency>
-    <groupId>com.sun.mail</groupId>
-    <artifactId>jakarta.mail</artifactId>
-    <version>2.0.1</version>
-</dependency> -->
-<dependency>
-<groupId>com.fasterxml.jackson.core</groupId>
+    	<groupId>com.sun.mail</groupId>
+    	<artifactId>jakarta.mail</artifactId>
+    	<version>2.0.1</version>
+	</dependency> -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
     </dependency>
     <dependency>
@@ -139,7 +139,7 @@
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-</dependency>
+	</dependency>
 	</dependencies>
 
 	<build>

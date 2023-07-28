@@ -38,7 +38,7 @@ public class Course {
 	
 	 @OneToMany(mappedBy="course")
 	 @JsonManagedReference
-	 @JsonIgnore
+	//  @JsonIgnore
 	 private List<Enrollment> enroll;
 	 
 	 
