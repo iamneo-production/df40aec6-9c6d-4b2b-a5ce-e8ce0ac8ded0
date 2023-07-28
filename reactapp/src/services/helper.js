@@ -3,7 +3,7 @@ import { getToken } from "../auth";
 
 
 // change this url while deploying
-export const BASE_URL = "https://8080-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/api/v1";
+export const BASE_URL = "https://8080-febddaaaeddabefdeccdcaedbbeaeaadbdbabf.project.examly.io/api/v1";
 
 export const myAxios = axios.create({
   baseURL: BASE_URL,

@@ -19,7 +19,7 @@ import com.example.springapp.service.FileStorageService;
 
 
 @Controller
-@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
+@CrossOrigin("https://8081-febddaaaeddabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/api/v1/auth/")
 public class FileController {
 

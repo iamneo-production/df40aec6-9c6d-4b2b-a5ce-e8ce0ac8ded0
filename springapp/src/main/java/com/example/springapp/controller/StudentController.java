@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
+@CrossOrigin("https://8081-febddaaaeddabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/api/v1/auth/")
 public class StudentController {
 	private Logger logger = LoggerFactory.getLogger(CourseController.class);
