@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {privateAxios} from "./../../services/helper"
-import axios from 'axios'
 import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
@@ -20,12 +19,8 @@ export default function Home() {
         console.log("---",result.data[0].roles[0].name);
     };
     const deleteUser=async(id)=>{
-        
-        //  await privateAxios.delete(`/auth/enrollment/student/${id}`);
-        //  await privateAxios.delete(`/auth/admission/student/${id}`);
         await privateAxios.delete(`/auth/students/${id}`);
         loadUsers()
-
     };
 
 

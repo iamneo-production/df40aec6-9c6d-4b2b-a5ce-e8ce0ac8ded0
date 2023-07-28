@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState , useEffect} from 'react';
 import './style.css';
 import { privateAxios } from '../../services/helper';

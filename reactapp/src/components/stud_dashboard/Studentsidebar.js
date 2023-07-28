@@ -8,7 +8,7 @@ const Studentsidebar = () => {
   return (
     <div className="col-md-5 col-lg-12 sidebar-offcanvas m-0 p-0" id="sidebar" role="navigation" style={{ backgroundColor: "#8294c439", minHeight: "100%" }}>
       <ul className="nav flex-column sticky-top pt-5 p-3 ">
-        <li className="nav-item mb-2 "><a className="nav-link text-secondary" href="#"><h5 style={{ color: "#645CBB", fontFamily:"montserrat", fontWeight:"800"}}>DASHBOARD</h5></a></li>
+        <li className="nav-item mb-2 "><a className="nav-link text-secondary" href="/#"><h5 style={{ color: "#645CBB", fontFamily:"montserrat", fontWeight:"800"}}>DASHBOARD</h5></a></li>
         {/*<div className="dropdown p-3">
        <button className="btn btn-secondary dropdown-toggle"  style={{ backgroundColor: "#645CBB"}} href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i className="fa fa-user" aria-hidden="true"></i> <span style={{ color: "white", fontFamily:"montserrat", fontWeight:"600" }}className="ml-3">Profile</span>

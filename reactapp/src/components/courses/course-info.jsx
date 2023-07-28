@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './course-info.css';
-import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { privateAxios } from '../../services/helper';
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import {privateAxios} from "./../../services/helper"
@@ -27,10 +26,18 @@ export default function Editcourse() {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
-      await privateAxios.put(`/auth/courses/${id}`, course);
+    try{
+      if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+        await privateAxios.put(`/auth/courses/${id}`, course);
+      }
     }
-    navigate("/main/course-management");
+    catch(ex)
+    {
+      console.log(ex);
+    }
+    finally{
+      navigate("/main/course-management");
+    }
   }
 
   const fetchCourses = async () =>{

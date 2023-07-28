@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
 import { Table, Form } from 'react-bootstrap';
 import { useParams } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";

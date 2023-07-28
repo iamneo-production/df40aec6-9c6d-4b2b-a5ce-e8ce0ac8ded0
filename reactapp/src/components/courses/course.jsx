@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import './course.css'
 import { useParams, useNavigate } from 'react-router-dom';
 import { privateAxios } from '../../services/helper';

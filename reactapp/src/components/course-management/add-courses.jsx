@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './add-courses.css'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 import {privateAxios} from "./../../services/helper"
@@ -23,10 +22,19 @@ export default function AddCourses() {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-    if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
-      await privateAxios.post("/auth/courses", course);
+    try
+    {
+        if(id!==0 && name!=="" && description!=="" && prerequisites!=="" && credits!==0){
+          await privateAxios.post("/auth/courses", course);
+      }
     }
-    navigate("/main/course-management");
+    catch(e){
+      console.log(e);
+    }
+    finally{
+      navigate("/main/course-management");
+    }
+    
   }
   const back = () =>{
     navigate("/main/course-management");

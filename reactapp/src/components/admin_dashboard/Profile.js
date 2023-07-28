@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { privateAxios } from '../../services/helper';
 
 const UserCredentials = () => {

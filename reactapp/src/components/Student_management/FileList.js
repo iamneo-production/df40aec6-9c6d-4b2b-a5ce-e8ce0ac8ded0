@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import {privateAxios} from "./../../services/helper"
 function FileList({id}) {
   const [files, setFiles] = useState([]);
