@@ -24,7 +24,7 @@ public class Enrollment {
 
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonBackReference
     private Course course;
 	
 	@ManyToOne
