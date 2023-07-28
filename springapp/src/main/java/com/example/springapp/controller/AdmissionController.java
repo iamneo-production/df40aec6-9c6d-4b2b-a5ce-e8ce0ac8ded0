@@ -22,7 +22,7 @@ import com.example.springapp.repository.StudentRepo;
 import javax.persistence.EntityNotFoundException;
 
 @RestController
-@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
+@CrossOrigin("https://8081-cbefcfdfabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/api/v1/auth/")
 public class AdmissionController {
 

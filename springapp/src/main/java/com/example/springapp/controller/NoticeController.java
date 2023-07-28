@@ -16,7 +16,7 @@ import com.example.springapp.model.Notice;
 import com.example.springapp.service.NoticeService;
 
 @RestController
-@CrossOrigin(origins="https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
+@CrossOrigin(origins="https://8081-cbefcfdfabefdeccdcaedbbeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/api/v1/auth/")
 public class NoticeController {
 	@Autowired

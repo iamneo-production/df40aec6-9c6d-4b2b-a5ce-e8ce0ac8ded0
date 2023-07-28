@@ -29,7 +29,7 @@ import com.example.springapp.repository.CourseRepo;
 
 
 @RestController
-@CrossOrigin("https://8081-cedbebdcdafeedaabefdeccdcaedbbeaeaadbdbabf.project.examly.io/") // connects the back end with front end
+@CrossOrigin("https://8081-cbefcfdfabefdeccdcaedbbeaeaadbdbabf.project.examly.io/") // connects the back end with front end
 @RequestMapping("/api/v1/auth/")
 public class CourseController {
 	@Autowired
