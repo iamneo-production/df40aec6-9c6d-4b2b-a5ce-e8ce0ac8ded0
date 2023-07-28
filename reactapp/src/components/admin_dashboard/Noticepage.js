@@ -27,7 +27,7 @@ function Noticepage() {
     // }
 
     function handleDelete(id) {
-        privateAxios.get(`/auth/notificationnotification/${id}`)
+        privateAxios.delete(`/auth/notification/${id}`)
           .then(() => {
             getData();
           })
